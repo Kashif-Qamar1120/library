@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>payment rcpit </title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-red p-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">𝕺𝖓𝖑𝖎𝖓𝖊 𝕷𝖎𝖇𝖗𝖆𝖗𝖞 𝕸𝖆𝖓𝖆𝖌𝖊𝖒𝖊𝖓𝖙 𝕾𝖞𝖘𝖙𝖊𝖒</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link mx-2 active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Books Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="categories.html">Blog</a></li>
+                  <li><a class="dropdown-item" href="categories.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="categories.html">Contact us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="cart.html">Carts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2" href="payment.html">Payment Recipt</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<!-- Payment Receipt Section -->
+<div class="container mt-4">
+    <h2>Payment Receipt</h2>
+
+    <!-- Receipt Table -->
+    <table class="table mt-3">
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="receiptItems">
+            <!-- Dynamically load receipt items using JavaScript -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" class="text-right"><strong>Total Amount: $<span id="totalAmount">0.00</span></strong></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Return Home Link -->
+    <p class="mt-4"><a href="index.html">Return to Home</a></p>
+</div>
+
+<!-- Include script.js at the end of the body to fetch and display payment receipt items -->
+<script src="script.js"></script>
+
+<!-- JavaScript to handle payment receipt functionality -->
+<script>
+    // Function to fetch and display payment receipt items
+    function fetchPaymentReceiptItems() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Dynamically load payment receipt items using JavaScript
+        const receiptItemsContainer = document.getElementById('receiptItems');
+        // ...
+    }
+
+    // Function to calculate total amount
+    function calculateTotalAmount() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Calculate total amount based on pricing details fetched from books.json
+        // Update the total amount in the HTML
+        const totalAmountElement = document.getElementById('totalAmount');
+        totalAmountElement.textContent = calculateTotalAmountFromReceiptItems().toFixed(2);
+    }
+
+    // Example function to calculate total amount from payment receipt items
+    function calculateTotalAmountFromReceiptItems() {
+        // Fetch payment receipt items from local storage or an API
+        // ...
+
+        // Calculate total amount based on pricing details fetched from books.json
+        let totalAmount = 0;
+        // ...
+
+        return totalAmount;
+    }
+
+    // Initial function calls
+    fetchPaymentReceiptItems();
+    calculateTotalAmount();
+</script>
+
+</body>
+</html>
